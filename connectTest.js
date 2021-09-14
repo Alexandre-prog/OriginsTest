@@ -10,6 +10,6 @@ const { Tag } = require('./app/models');
 // console.error('Unable to connect to the database:', error);
 // });
 
-Tag.findAll().then((tags) => {
-    console.log(tags);
-});
+// Tag.findAll().then((tags) => {
+//     console.log(JSON.stringify(tags));
+// });

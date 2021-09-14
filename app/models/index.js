@@ -2,7 +2,7 @@ const Tag = require('./Tag');
 const Video = require('./Video');
 
 Tag.belongsToMany(Video, {
-    through: 'video_han_tag',
+    through: 'video_has_tag',
     foreignKey: 'tag_id',
     otherKey: 'video_id',
     as: "videos"

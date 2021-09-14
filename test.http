@@ -1,0 +1,52 @@
+########## Tags ##########
+
+### Afficher les tags
+GET http://localhost:3333/tags
+
+### Nouveau tag
+POST http://localhost:3333/newTag
+Content-Type: application/x-www-form-urlencoded
+
+valeur=new tag
+
+### Supprimer un tag
+DELETE http://localhost:3333/deleteTag
+Content-Type: application/x-www-form-urlencoded
+
+valeur=new tag
+
+### associer un tag a une video
+POST http://localhost:3333/videos/4/tags
+Content-Type: application/x-www-form-urlencoded
+
+tag_id=2
+
+### dissocié un tag d'une carte
+DELETE http://localhost:3333/videos/1/tags/1
+
+
+
+########## Videos ##########
+
+### Afficher les videos
+GET http://localhost:3333/videos
+
+### Ajout d'une nouvelle video
+POST http://localhost:3333/newvideo
+Content-Type: application/x-www-form-urlencoded
+
+nom=video humoristique
+&description=video humoristique
+&video_url=http://URLdeVideoHumoristique.fr
+
+### Modification d'une video
+PATCH http://localhost:3333/updateVideo/2
+Content-Type: application/x-www-form-urlencoded
+
+video_url=http://URLdeVideoHumoristique.fr
+
+### Suppression d'une video
+DELETE http://localhost:3333/deleteVideo/3
+
+### récupération de toutes les video d'un tag
+GET http://localhost:3333/videos/tag/2

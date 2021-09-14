@@ -12,7 +12,7 @@ Video.init({
       description: {
         type: DataTypes.TEXT
       },
-      url: {
+      video_url: {
         type: DataTypes.STRING,
         allowNull: false,
       },
